@@ -51,7 +51,7 @@ def welcome():
 # Design a query to retrieve the last 12 months of precipitation data and plot the results. 
 # Starting from the most recent data point in the database
 
-@app.route("/api/v1.0/precipitation<")
+@app.route("/api/v1.0/precipitation")
 def precipitation_data():
     # Create our session (link) from Python to the DB
     session = Session(engine)
@@ -72,7 +72,7 @@ def precipitation_data():
 # Design a query to calculate the total number stations in the dataset
 # Design a query to find the most active stations (i.e. what stations have the most rows?)
 
-@app.route("/api/v1.0/station<")
+@app.route("/api/v1.0/station")
 def station_data():
     # Create our session (link) from Python to the DB
     session = Session(engine)
@@ -88,7 +88,7 @@ def station_data():
 
     return jsonify(station_data)
 
-@app.route("/api/v1.0/tobs<")
+@app.route("/api/v1.0/tobs")
 def tobs_data():
     # Create our session (link) from Python to the DB
     session = Session(engine)
